@@ -359,13 +359,13 @@ if __name__ == '__main__':
     # Disable WebP by default
     args.append('-Ddisable_webp=1')
     # Disable Angle by default
-    args.append('-Ddisable_angle=1')
+    args.append('-Ddisable_angle=0')
     # Disable QUIC by default
     args.append('-Ddisable_quic_support=1')
     # Disable Sync compositor by default
-    args.append('-Ddisable_sync_compositor=1')
+    args.append('-Ddisable_sync_compositor=0')
     # Disable Webaudio by default
-    args.append('-Ddisable_web_audio=1')
+    args.append('-Ddisable_web_audio=0')
     args.append('-Ddisable_webaudio_hrtf=1')
     args.append('-Duse_openmax_dl_fft=0')
     # Enable use_minimum_resources by default
@@ -373,9 +373,9 @@ if __name__ == '__main__':
     # Disable buildin extension by default.
     args.append('-Ddisable_builtin_extensions=1')
     # Disable Devtools by default
-    args.append('-Ddisable_devtools=0')
+    args.append('-Ddisable_devtools=1')
     # Disable Webvideo by default.
-    args.append('-Ddisable_web_video=1')
+    args.append('-Ddisable_web_video=0')
     # Disable Web Speech API by default
     args.append('-Denable_web_speech=0')
     # Enable "Optimize for size, Os" compile option by default
