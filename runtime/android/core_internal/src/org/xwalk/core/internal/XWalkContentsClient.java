@@ -5,12 +5,15 @@
 
 package org.xwalk.core.internal;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.graphics.Bitmap;
 import android.graphics.Picture;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.http.SslError;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -24,6 +27,7 @@ import java.security.KeyStore.PrivateKeyEntry;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.chromium.content.browser.ContentViewClient;
 import org.chromium.content_public.browser.WebContents;
@@ -167,6 +171,9 @@ abstract class XWalkContentsClient extends ContentViewClient {
     public abstract void onLoadResource(String url);
 
     public abstract boolean shouldOverrideUrlLoading(String url);
+    
+    public abstract boolean shouldOverrideMediaPlaying(MediaPlayer mediaPlayer, 
+            Context context, Uri uri, Map<String, String> headers);
 
     public abstract void onUnhandledKeyEvent(KeyEvent event);
 
